@@ -1,0 +1,149 @@
+.notice {
+	background-color: white;
+	max-width: 700px;
+	min-width: 300px;
+	margin: 2rem auto 0 auto;
+	font-family: $mainFont;
+
+	&__img {
+		margin: 1rem auto;
+		width: 100px;
+	}
+
+	&__message {
+		margin: 0;
+		padding: 1rem;
+		font-size: 1.3rem;
+		line-height: 1.5;
+		background-color: $lightBlue;
+		box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		transform: translatey(-50px);
+		animation: slideUp--contact 2s ease forwards;
+		text-align: justify;
+
+		@include desktop {
+			padding: 1rem;
+			text-align: center;
+		}
+	}
+}
+
+.span-text {
+	text-align: center;
+	color: $mutedPurple;
+	display: block;
+	background: white;
+	font-weight: 600;
+	padding: 0.25em;
+	margin: 1rem 0;
+	border-radius: 5px;
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.social {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 3rem 0 5rem 0;
+
+	&__container {
+		background-color: lighten($mutedPurple, 30%);
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 130px;
+		border-radius: 10px;
+		box-shadow: 0.5px 1px 2px rgba(66, 12, 12, 0.3);
+
+		&:hover i,
+		&:hover a {
+			color: darken($blue, 5%);
+		}
+	}
+
+	& a {
+		transition: 0.5s ease;
+		display: block;
+		text-decoration: none;
+		font-size: 1.7rem;
+		color: black;
+		font-weight: 600;
+	}
+
+	&__icon {
+		color: black;
+		font-size: 4rem;
+		transition: 0.5s ease;
+	}
+}
+
+.contact-section {
+	max-width: 700px;
+	margin: 2em auto;
+	min-width: 300px;
+	background-color: $lightBlue;
+	padding-bottom: 1rem;
+
+	&__company-info {
+		background-color: white;
+		background-repeat: no-repeat;
+		background-position-y: 65px;
+		background-position-x: 50%;
+		background-blend-mode: lighten;
+	}
+
+	&__heading {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		padding: 0.25em;
+		background: $blue;
+		font-weight: bold;
+	}
+
+	&__ul {
+		font-size: 1.2em;
+		list-style: none;
+		padding: 1em;
+	}
+
+	&__ul a {
+		text-decoration: none;
+		color: black;
+	}
+
+	&__icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		transition: all 0.5s ease;
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	&__links {
+		margin-bottom: 1.5em;
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+
+	& label {
+		margin-bottom: 0.5em;
+		display: block;
+		padding: 0.25em;
+		font-size: 1.3rem;
+		transition: all 1s ease;
+	}
+
+	& input,
+	& textarea {
+		margin-bottom: 0.5em;
+		padding: 0.25em;
+		font-size: 1.1rem;
+		text-align: center;
+		transition: all 1s ease;
+		font-family: $mainFont;
+		width: 80%;
+	}
+}
+
+/*# sourceMappingURL=contact.css.map */

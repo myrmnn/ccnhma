@@ -1,0 +1,136 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $mainFont;
+	text-align: center;
+	overflow-x: hidden;
+
+	@include desktop {
+		width: 1000px;
+		margin: 0 auto;
+	}
+}
+main {
+	margin-top: -3px;
+}
+
+.title {
+	font-size: 1.6rem;
+}
+
+.para {
+	padding: 1em 1em;
+	line-height: 2;
+	font-size: 1.1rem;
+}
+
+.page-titles {
+	font-size: 1em;
+	background: lighten($mutedPurple, 15%);
+	width: 100%;
+	padding: 0.75rem;
+	color: whitesmoke;
+}
+
+.line {
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		rgba($blue, 0.75),
+		$mutedPurple,
+		rgba($blue, 0.75),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.btn {
+	padding: 0.33em 1em;
+	color: whitesmoke;
+	text-decoration: none;
+	display: inline-block;
+	margin: 2em auto;
+	display: block;
+	border: none;
+	outline: none;
+	background-color: $blue;
+	border-radius: 15px;
+	box-shadow: 1px 2px silver;
+	font-family: $mainFont;
+	font-size: 1.2em;
+	font-weight: 200;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	text-align: center;
+	width: 200px;
+
+	&:hover {
+		background-color: $mutedPurple;
+	}
+}
+
+.gradient-body {
+	background-image: linear-gradient(
+		to top,
+		lighten($mutedPurple, 25%),
+		lighten($blue, 45%)
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-family: $mainFont;
+	overflow-x: hidden;
+
+	&--reviews {
+		background-image: linear-gradient(to bottom, white, $mutedPurple);
+	}
+}
+
+.info {
+	opacity: 0.9;
+	background-color: white;
+	line-height: 1.3;
+	max-width: 800px;
+	font-size: 1.5rem;
+	padding: 2rem 0;
+
+	@include desktop {
+		margin: 4rem auto;
+	}
+	&__title {
+		margin: 1rem 0;
+		font-family: $scriptFont;
+		font-size: 2rem;
+	}
+
+	&__icon {
+		width: 100px;
+	}
+	&__content {
+		width: 80%;
+		margin: 1rem auto;
+	}
+}
+
+.icon-container {
+	background-color: $lightBlue;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--purple {
+		margin: 1.5rem auto;
+		background-color: lighten($mutedPurple, 15%);
+	}
+}

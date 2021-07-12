@@ -1,0 +1,16 @@
+.menu {
+	position: absolute;
+	width: 25px;
+	right: 5px;
+	cursor: pointer;
+	outline: none;
+	border-radius: 50%;
+
+	&.open {
+		background-color: lighten($mutedPurple, 15%);
+	}
+
+	@include desktop {
+		display: none;
+	}
+}

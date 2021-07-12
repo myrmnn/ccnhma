@@ -1,0 +1,48 @@
+.header {
+	position: fixed;
+	width: 100%;
+	overflow-x: hidden;
+	z-index: 2;
+	background-color: white;
+
+	@include desktop {
+		width: 1000px;
+		position: relative;
+	}
+
+	&__img {
+		width: 20px;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5em 0;
+		text-align: center;
+
+		& a {
+			text-decoration: none;
+		}
+	}
+
+	&__icon {
+		width: 50px;
+		margin-right: 1em;
+	}
+
+	&__heading {
+		font-family: "Poiret One", cursive;
+		font-weight: bold;
+		color: $blue;
+		font-size: 1.5rem;
+		margin-left: -20px;
+	}
+
+	&__subtitle {
+		font-size: 1.2rem;
+		font-family: $scriptFont;
+		letter-spacing: 1px;
+		color: black;
+	}
+}

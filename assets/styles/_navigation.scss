@@ -1,0 +1,98 @@
+nav {
+	display: flex;
+}
+
+.navbar {
+	background-color: $blue;
+	position: fixed;
+	top: 74px;
+	width: 100%;
+	right: -100%;
+	z-index: 2;
+	opacity: 0;
+	transition: right 0.7s ease-in-out, opacity 0.7s ease-in-out;
+
+	@include desktop {
+		right: 0;
+		opacity: 1;
+		display: flex;
+		left: 0;
+		width: 1000px;
+		margin: 0 auto;
+		position: static;
+		visibility: visible;
+
+		&.fixedNav {
+			position: fixed;
+			top: 0;
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	& li {
+		list-style: none;
+		flex: 1;
+		padding: 0.5em 0;
+		position: relative;
+
+		&.logo {
+			display: none;
+			transition: all 1.5s ease-in;
+
+			&__img {
+				width: 25px;
+			}
+
+			@include desktop {
+				background: $offWhite;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				white-space: nowrap;
+				max-width: 0;
+
+				&.show-logo {
+					max-width: 600px;
+				}
+
+				& a {
+					font-weight: bold;
+					margin-left: 0.3em;
+					color: black;
+				}
+			}
+		}
+	}
+
+	& a {
+		text-decoration: none;
+		color: $offWhite;
+		font-size: 1.5rem;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 50%;
+			height: 1.5px;
+			margin: 0 auto;
+			bottom: 7.5px;
+			left: 25%;
+			background: $lightBlue;
+			transform: scalex(0);
+			transform-origin: center;
+			transition: transform 0.5s ease;
+		}
+
+		&:hover::after,
+		&:focus::after {
+			transform: scalex(1);
+			transition: transform 0.5s ease;
+		}
+	}
+
+	&.show {
+		right: 0;
+		opacity: 1;
+	}
+}

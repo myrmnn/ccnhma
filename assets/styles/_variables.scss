@@ -1,0 +1,12 @@
+$mainFont: "Poiret One", cursive;
+$scriptFont: "Zeyada", cursive;
+$blue: #397979;
+$lightBlue: rgb(201, 236, 228);
+$offWhite: #f8f5f7;
+$mutedPurple: #856268;
+
+@mixin desktop {
+	@media screen and (min-width: 1000px) {
+		@content;
+	}
+}
